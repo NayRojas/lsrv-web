@@ -1,0 +1,57 @@
+.header {
+    background-color: #ffffff; /* Color de fondo del header */
+    color: #000478; /* Color del texto */
+    padding: 1rem;
+
+  
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px; /* Espaciado interno */
+    }
+  
+    .logo {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    text-transform: uppercase;
+    align-self: center;
+      img {
+      height: 40px; /* Tamaño del logo */
+      border-radius: 5px;
+      padding-right: 1rem;
+    }
+  }
+  
+    .company-name {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.2rem; /* Tamaño del nombre de la empresa */
+      margin: auto;
+    }
+  
+    .options ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+  
+    .options li {
+      margin-right: 20px; /* Espaciado entre opciones */
+    }
+  
+    .options a {
+      color: #000478; /* Color del texto */
+      font-family: Arial, Helvetica, sans-serif;
+      text-decoration: none;
+    }
+  
+    .search-icon,
+    .cart-icon,
+    .menu-icon {
+      font-size: 1.5rem; /* Tamaño de los iconos */
+      cursor: pointer;
+    }
+  }
+  

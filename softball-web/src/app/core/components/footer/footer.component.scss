@@ -1,0 +1,30 @@
+.footer {
+    background-color: #333; /* Color de fondo del footer */
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff; /* Color del texto */
+  
+    .container {
+      padding: 70px; /* Espaciado interno */
+    }
+  
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    .col {
+      flex: 1;
+      width: calc(25% - 20px); /* Ancho de cada columna */
+      margin-right: 20px; /* Espaciado entre columnas */
+    }
+  
+    h3 {
+      font-size: 1.5rem; /* Tamaño del título */
+    }
+  
+    p {
+      font-size: 1rem; /* Tamaño del contenido */
+    }
+  }
+  

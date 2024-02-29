@@ -1,0 +1,32 @@
+<!-- TODO: Add header table titles -->
+<div class="header ">
+    <div class="breadcrumb content">
+      <span routerLink="/home">INICIO</span>
+      <span class="separator">|</span>
+      <span>RESULTADOS</span>
+      <h1 class="title">RESULTADOS</h1>
+
+    </div>
+  </div>
+  <div class="scoreboard-container">
+    <div class="date-time"> <span [innerHTML]="date"></span>    <span class="season-text">Temporada {{season}}</span></div>
+    <div class="scoreboard-cont">
+      <div class="scoreboard" *ngFor="let match of matchResults" >
+          <div class="team-score">
+            <div class="team">
+              <img src="../../../assets/img/team-icon.jpeg">
+              <p>{{ team1Name }}</p>
+            </div>
+            <div class="vs">VS</div>
+            <div class="team">
+              <img src="../../../assets/img/team-icon.jpeg">
+              <p>{{ team2Name }}</p>
+            </div>
+          </div>
+          <div class="score">{{match.team1Score}} - {{match.team2Score}}</div>
+  
+        </div>
+    </div>
+
+  </div>
+
