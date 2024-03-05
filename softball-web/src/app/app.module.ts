@@ -8,6 +8,7 @@ import { FooterComponent } from './core/components/footer/footer.component';
 import { HomeComponent } from './features/home/home.component';
 import { CarouselComponent } from './core/components/carousel/carousel.component';
 import { ResultsComponent } from './features/results/results.component';
+import { StatisticsComponent } from './features/statistics/statistics.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ResultsComponent } from './features/results/results.component';
     FooterComponent,
     HomeComponent,
     CarouselComponent,
-    ResultsComponent
+    ResultsComponent,
+    StatisticsComponent
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,19 @@
     </div>
   </div>
   <div class="scoreboard-container">
+    <div class="radio-button">
+      <div class="form-check-category">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"
+              checked>
+          <label class="form-check-label" for="inlineRadio1">Categoria B</label>
+      </div>
+      <div class="form-check-category">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+              value="option2">
+          <label class="form-check-label" for="inlineRadio2">Categoria C</label>
+      </div>
+  </div>
+  
     <div class="date-time"> <span [innerHTML]="date"></span>    <span class="season-text">Temporada {{season}}</span></div>
     <div class="scoreboard-cont">
       <div class="scoreboard" *ngFor="let match of matchResults" >
