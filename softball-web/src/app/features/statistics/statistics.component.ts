@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 interface StatisticResult {
   icon: string;
   teamName: string;
+  teamCategory: string,
   teamResults: {
     JJ: number;
     JG: number;
@@ -19,14 +20,15 @@ interface StatisticResult {
   styleUrls: ['./statistics.component.scss']
 })
 export class StatisticsComponent {
-
+  public categoryList: any;
   public date: string = '';
   public season: string = 'Campeones de Lima'
   public teamResult = {}
   statisticResults: StatisticResult[] = [
     {
-      icon: '',
+      icon: '../../../../assets/img/teams/Rangers.jpeg',
       teamName: 'Rangers',
+      teamCategory: 'A',
       teamResults: {
         JJ: 3,
         JG: 3,
@@ -39,8 +41,9 @@ export class StatisticsComponent {
       }
     },
     {
-      icon: '',
-      teamName: 'Rangers',
+      icon: '../../../../assets/img/teams/Soy VenezuelaB.jpeg',
+      teamName: 'Soy Venezuela',
+      teamCategory: 'B',
       teamResults: {
         JJ: 3,
         JG: 3,
@@ -53,8 +56,9 @@ export class StatisticsComponent {
       }
     },
     {
-      icon: '',
-      teamName: 'Rangers',
+      icon: '../../../../assets/img/team-icon.jpeg',
+      teamName: 'Royals',
+      teamCategory: 'B',
       teamResults: {
         JJ: 3,
         JG: 3,
@@ -67,8 +71,9 @@ export class StatisticsComponent {
       }
     },
     {
-      icon: '',
-      teamName: 'Rangers',
+      icon: '../../../../assets/img/teams/CardenalesB.jpeg',
+      teamName: 'Cardenales',
+      teamCategory: 'B',
       teamResults: {
         JJ: 3,
         JG: 3,
@@ -80,8 +85,9 @@ export class StatisticsComponent {
         PTS: 9,
       }
     }, {
-      icon: '',
-      teamName: 'Rangers',
+      icon: '../../../../assets/img/teams/Milwaukee.jpeg',
+      teamName: 'Milwaukee',
+      teamCategory: 'B',
       teamResults: {
         JJ: 3,
         JG: 3,
@@ -94,8 +100,9 @@ export class StatisticsComponent {
       }
     },
     {
-      icon: '',
-      teamName: 'Rangers',
+      icon: '../../../../assets/img/teams/The Rockies.jpeg',
+      teamName: 'The Rockies',
+      teamCategory: 'B',
       teamResults: {
         JJ: 3,
         JG: 3,
@@ -108,8 +115,9 @@ export class StatisticsComponent {
       }
     },
     {
-      icon: '',
-      teamName: 'Rangers',
+      icon: '../../../../assets/img/teams/White Sox.jpeg',
+      teamName: 'White Sox',
+      teamCategory: 'B',
       teamResults: {
         JJ: 3,
         JG: 3,
@@ -122,8 +130,9 @@ export class StatisticsComponent {
       }
     },
     {
-      icon: '',
-      teamName: 'Rangers',
+      icon: '../../../../assets/img/teams/The AlliensB.jpeg',
+      teamName: 'The Alliens',
+      teamCategory: 'B',
       teamResults: {
         JJ: 3,
         JG: 3,
@@ -136,8 +145,130 @@ export class StatisticsComponent {
       }
     },
     {
-      icon: '',
-      teamName: 'Rangers',
+      icon: '../../../../assets/img/teams/GuerrerosB.jpeg',
+      teamName: 'Guerreros',
+      teamCategory: 'B',
+      teamResults: {
+        JJ: 3,
+        JG: 3,
+        JE: 0,
+        JP: 37,
+        CA: 10,
+        CR: 18,
+        DC: -4,
+        PTS: 9,
+      }
+    },
+    {
+      icon: '../../../../assets/img/teams/VIkingosA.jpeg',
+      teamName: 'Vikingos',
+      teamCategory: 'A',
+      teamResults: {
+        JJ: 3,
+        JG: 3,
+        JE: 0,
+        JP: 37,
+        CA: 10,
+        CR: 18,
+        DC: -4,
+        PTS: 9,
+      }
+    },
+    {
+      icon: '../../../../assets/img/teams/EspartanosA.jpeg',
+      teamName: 'Espartanos',
+      teamCategory: 'A',
+      teamResults: {
+        JJ: 3,
+        JG: 3,
+        JE: 0,
+        JP: 37,
+        CA: 10,
+        CR: 18,
+        DC: -4,
+        PTS: 9,
+      }
+    },
+    {
+      icon: '../../../../assets/img/teams/Team Borracho.jpeg',
+      teamName: 'Team Borracho',
+      teamCategory: 'A',
+      teamResults: {
+        JJ: 3,
+        JG: 3,
+        JE: 0,
+        JP: 37,
+        CA: 10,
+        CR: 18,
+        DC: -4,
+        PTS: 9,
+      }
+    },
+    {
+      icon: '../../../../assets/img/teams/Pitsburg.jpeg',
+      teamName: 'Pitsburg',
+      teamCategory: 'A',
+      teamResults: {
+        JJ: 3,
+        JG: 3,
+        JE: 0,
+        JP: 37,
+        CA: 10,
+        CR: 18,
+        DC: -4,
+        PTS: 9,
+      }
+    },
+    {
+      icon: '../../../../assets/img/teams/Toronto.jpeg',
+      teamName: 'Toronto',
+      teamCategory: 'A',
+      teamResults: {
+        JJ: 3,
+        JG: 3,
+        JE: 0,
+        JP: 37,
+        CA: 10,
+        CR: 18,
+        DC: -4,
+        PTS: 9,
+      }
+    },
+    {
+      icon: '../../../../assets/img/teams/Boston.jpeg',
+      teamName: 'Boston',
+      teamCategory: 'A',
+      teamResults: {
+        JJ: 3,
+        JG: 3,
+        JE: 0,
+        JP: 37,
+        CA: 10,
+        CR: 18,
+        DC: -4,
+        PTS: 9,
+      }
+    }
+    ,
+    {
+      icon: '../../../../assets/img/teams/Bravos.jpeg',
+      teamName: 'Bravos',
+      teamCategory: 'A',
+      teamResults: {
+        JJ: 3,
+        JG: 3,
+        JE: 0,
+        JP: 37,
+        CA: 10,
+        CR: 18,
+        DC: -4,
+        PTS: 9,
+      }
+    },
+    {
+      icon: '../../../../assets/img/teams/MaitanaA.jpeg',
+      teamName: 'Maitana',
+      teamCategory: 'A',
       teamResults: {
         JJ: 3,
         JG: 3,
@@ -155,7 +286,20 @@ export class StatisticsComponent {
   constructor() {
     this.transformSeasonDate()
     this.teamResult = this.statisticResults[0].teamResults
+    this.categoryList = this.statisticResults;
   }
+
+  ngOnInit(): void {
+    this.setCategoryB();
+  }
+
+
+  public setCategoryB() {
+    this.categoryList = this.statisticResults.filter(item => item.teamCategory === "B")
+  }
+   public setCategoryA(){
+    this.categoryList = this.statisticResults.filter(item => item.teamCategory === "A")
+   }
 
   public transformSeasonDate() {
     const currentDate = new Date();

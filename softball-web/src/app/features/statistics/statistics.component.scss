@@ -163,7 +163,7 @@
 
     img {
         width: 43px;
-        height: auto;
+        height: 43px;
         outline: none;
         border: none;
         border-radius: 100%;
@@ -172,7 +172,7 @@
 
 .position {
     display: flex;
-    margin-left: 10rem;
+    margin-left: 6rem;
 
     div {
         justify-content: space-between;
@@ -210,6 +210,7 @@
 }
 
 .vs {
+    width: 150px;
     margin: 0 15px;
     padding: 2%;
     font-size: 15px;

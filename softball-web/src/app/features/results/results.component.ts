@@ -3,11 +3,14 @@ import { Component, Input } from '@angular/core';
 
 interface MatchResult {
   team1Name: string;
+  teamIcon1: string,
   team2Name: string;
+  teamIcon2: string,
   team1Score: number;
   team2Score: number;
   matchDate: string;
   matchTime: string;
+  category: string;
 }
 
 @Component({
@@ -25,97 +28,132 @@ export class ResultsComponent {
   @Input() team2Logo: string = '';
   @Input() team2Name: string = 'Soy Venezuela';
   @Input() team2Score: number = 5;
-
+  public categoryList: any;
   public date: string = '';
   public season: string = 'Campeones de Lima'
   matchResults: MatchResult[] = [
     {
-      team1Name: 'Cagua',
+      team1Name: 'Rangers',
+      teamIcon1: '../../../../assets/img/teams/Rangers.jpeg',
       team2Name: 'Soy Venezuela',
+      teamIcon2:  '../../../../assets/img/teams/Soy VenezuelaB.jpeg',
       team1Score: 7,
       team2Score: 5,
       matchDate: 'December 25, 2022',
-      matchTime: '4:00 PM'
+      matchTime: '4:00 PM',
+      category: 'A'
     },
     {
-      team1Name: 'Cagua',
+      team1Name: 'Rangers',
+      teamIcon1: '../../../../assets/img/teams/Rangers.jpeg',
       team2Name: 'Soy Venezuela',
+      teamIcon2:  '../../../../assets/img/teams/Soy VenezuelaB.jpeg',
       team1Score: 7,
       team2Score: 5,
       matchDate: 'December 25, 2022',
-      matchTime: '4:00 PM'
-    },
-    {
-      team1Name: 'Cagua',
+      matchTime: '4:00 PM',
+      category: 'A'
+
+    },    {
+      team1Name: 'Rangers',
+      teamIcon1: '../../../../assets/img/teams/Rangers.jpeg',
       team2Name: 'Soy Venezuela',
+      teamIcon2:  '../../../../assets/img/teams/Soy VenezuelaB.jpeg',
       team1Score: 7,
       team2Score: 5,
       matchDate: 'December 25, 2022',
-      matchTime: '4:00 PM'
-    },
-    {
-      team1Name: 'Cagua',
+      matchTime: '4:00 PM',
+      category: 'A'
+    },    {
+      team1Name: 'Rangers',
+      teamIcon1: '../../../../assets/img/teams/Rangers.jpeg',
       team2Name: 'Soy Venezuela',
+      teamIcon2:  '../../../../assets/img/teams/Soy VenezuelaB.jpeg',
       team1Score: 7,
       team2Score: 5,
       matchDate: 'December 25, 2022',
-      matchTime: '4:00 PM'
-    },
-    {
-      team1Name: 'Cagua',
+      matchTime: '4:00 PM',
+      category: 'A'
+    },    {
+      team1Name: 'Rangers',
+      teamIcon1: '../../../../assets/img/teams/Rangers.jpeg',
       team2Name: 'Soy Venezuela',
+      teamIcon2:  '../../../../assets/img/teams/Soy VenezuelaB.jpeg',
       team1Score: 7,
       team2Score: 5,
       matchDate: 'December 25, 2022',
-      matchTime: '4:00 PM'
-    },
-    {
-      team1Name: 'Cagua',
+      matchTime: '4:00 PM',
+      category: 'A'
+    },    {
+      team1Name: 'Rangers',
+      teamIcon1: '../../../../assets/img/teams/Rangers.jpeg',
       team2Name: 'Soy Venezuela',
+      teamIcon2:  '../../../../assets/img/teams/Soy VenezuelaB.jpeg',
       team1Score: 7,
       team2Score: 5,
       matchDate: 'December 25, 2022',
-      matchTime: '4:00 PM'
-    },
-    {
-      team1Name: 'Cagua',
+      matchTime: '4:00 PM',
+      category: 'A'
+    },    {
+      team1Name: 'Rangers',
+      teamIcon1: '../../../../assets/img/teams/Rangers.jpeg',
       team2Name: 'Soy Venezuela',
+      teamIcon2:  '../../../../assets/img/teams/Soy VenezuelaB.jpeg',
       team1Score: 7,
       team2Score: 5,
       matchDate: 'December 25, 2022',
-      matchTime: '4:00 PM'
-    },
-    {
-      team1Name: 'Cagua',
+      matchTime: '4:00 PM',
+      category: 'B'
+    },    {
+      team1Name: 'Rangers',
+      teamIcon1: '../../../../assets/img/teams/Rangers.jpeg',
       team2Name: 'Soy Venezuela',
+      teamIcon2:  '../../../../assets/img/teams/Soy VenezuelaB.jpeg',
       team1Score: 7,
       team2Score: 5,
       matchDate: 'December 25, 2022',
-      matchTime: '4:00 PM'
-    },
-    {
-      team1Name: 'Cagua',
+      matchTime: '4:00 PM',
+      category: 'B'
+    },    {
+      team1Name: 'Rangers',
+      teamIcon1: '../../../../assets/img/teams/Rangers.jpeg',
       team2Name: 'Soy Venezuela',
+      teamIcon2:  '../../../../assets/img/teams/Soy VenezuelaB.jpeg',
       team1Score: 7,
       team2Score: 5,
       matchDate: 'December 25, 2022',
-      matchTime: '4:00 PM'
-    },
-    {
-      team1Name: 'Cagua',
+      matchTime: '4:00 PM',
+      category: 'B'
+    },    {
+      team1Name: 'Rangers',
+      teamIcon1: '../../../../assets/img/teams/Rangers.jpeg',
       team2Name: 'Soy Venezuela',
+      teamIcon2:  '../../../../assets/img/teams/Soy VenezuelaB.jpeg',
       team1Score: 7,
       team2Score: 5,
       matchDate: 'December 25, 2022',
-      matchTime: '4:00 PM'
+      matchTime: '4:00 PM',
+      category: 'B'
     },
     // Add more match results as needed
   ];
 
   constructor() {
-    this.transformSeasonDate()
+    this.transformSeasonDate();
+    this.categoryList = this.matchResults;
   }
 
+  ngOnInit(): void {
+    this.setCategoryB();
+  }
+
+
+  public setCategoryB() {
+    this.categoryList = this.matchResults.filter(item => item.category === "B")
+  }
+   public setCategoryA(){
+    this.categoryList = this.matchResults.filter(item => item.category === "A")
+   }
   public transformSeasonDate() {
     const currentDate = new Date();
     // Get the day of the week in Spanish
