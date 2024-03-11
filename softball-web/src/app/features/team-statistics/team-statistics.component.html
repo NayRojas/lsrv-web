@@ -1,0 +1,52 @@
+<div class="header ">
+    <div class="breadcrumb content">
+        <span routerLink="/home">INICIO</span>
+        <span class="separator">|</span>
+        <span>ESTADISTICAS</span>
+        <h1 class="title">ESTADISTICAS</h1>
+
+    </div>
+</div>
+<div *ngFor="let team of categoryList">
+    <img src="{{team.teamIcon}}" alt="">
+    <p>{{team.nameTeam}}</p>
+    
+</div>
+<div class="scoreboard-container">
+    <div class="table-title">
+        <div><span>Nombre y apellido</span> </div>
+        <div>
+            <span class="season-text">VB</span>
+            <span class="season-text">AI</span>
+            <span class="season-text">HC</span>
+            <span class="season-text">H1</span>
+            <span class="season-text">H2</span>
+            <span class="season-text">H3</span>
+            <span class="season-text">HR</span>
+            <span class="season-text">JJ</span>
+            <span class="season-text">AVG.</span>
+
+        </div>
+    </div>
+    <div class="scoreboard-cont">
+        <div class="scoreboard" *ngFor="let team of categoryList.players">
+            <div class="team-score">
+                <div class="vs">{{team.fullName}}</div>
+                <div class="position">
+                    <div>{{team.VB}}</div>
+                    <div>{{team.AI}}</div>
+                    <div>{{team.HC}}</div>
+                    <div>{{team.H1}}</div>
+                    <div>{{team.H2}}</div>
+                    <div>{{team.H3}}</div>
+                    <div>{{team.HR}}</div>
+                    <div>{{team.JJ}}</div>
+                    <div>{{team.AVG}}</div>
+                </div>
+            </div>
+            <div class="score"></div>
+
+        </div>
+    </div>
+
+</div>

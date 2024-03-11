@@ -10,6 +10,7 @@ import { CarouselComponent } from './core/components/carousel/carousel.component
 import { ResultsComponent } from './features/results/results.component';
 import { StatisticsComponent } from './features/statistics/statistics.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { TeamStatisticsComponent } from './features/team-statistics/team-statistics.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     HomeComponent,
     CarouselComponent,
     ResultsComponent,
-    StatisticsComponent
+    StatisticsComponent,
+    TeamStatisticsComponent
   ],
   imports: [
     BrowserModule,

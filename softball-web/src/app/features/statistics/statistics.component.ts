@@ -1,19 +1,7 @@
 import { Component } from '@angular/core';
-interface StatisticResult {
-  icon: string;
-  teamName: string;
-  teamCategory: string,
-  teamResults: {
-    JJ: number;
-    JG: number;
-    JE: number;
-    JP: number;
-    CA: number;
-    CR: number;
-    DC: number;
-    PTS: number;
-  }
-}
+import { Router } from '@angular/router';
+import { StatisticResult, TeamStatistic } from 'src/app/shared/utils/interfaces/team.inteerface';
+
 @Component({
   selector: 'app-statistics',
   templateUrl: './statistics.component.html',
@@ -283,7 +271,8 @@ export class StatisticsComponent {
     // Add more match results as needed
   ];
 
-  constructor() {
+
+  constructor( private router: Router) {
     this.transformSeasonDate()
     this.teamResult = this.statisticResults[0].teamResults
     this.categoryList = this.statisticResults;
@@ -299,6 +288,10 @@ export class StatisticsComponent {
   }
    public setCategoryA(){
     this.categoryList = this.statisticResults.filter(item => item.teamCategory === "A")
+   }
+
+   public showTeamStatistics(){
+    this.router.navigateByUrl('/estadisticasteam');
    }
 
   public transformSeasonDate() {
