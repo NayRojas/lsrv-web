@@ -27,6 +27,7 @@ export interface StatisticResult {
   
   export interface Player {
       fullName: string,
+      photo: string,
       VB: string,
       AI:  string,
       HC: string,

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { TeamStatistic } from 'src/app/shared/utils/interfaces/team.inteerface';
 
 @Component({
@@ -11,7 +12,7 @@ export class TeamStatisticsComponent {
 
   teamStatistics: TeamStatistic = 
     {
-      teamIcon: '../../../../assets/img/teams/GuerrerosB.jpeg',
+      teamIcon: '../../../../assets/img/teams/Cagua.jpeg',
       teamName: 'Cagua',
       teamCategory: 'B',
       points: 25,
@@ -21,6 +22,7 @@ export class TeamStatisticsComponent {
       players: [
       {
         fullName: 'Jesus Sanchez',
+        photo: '../../../assets/img/player.jpeg',
         VB: '9',
         AI: '9',
         HC: '4',
@@ -33,6 +35,7 @@ export class TeamStatisticsComponent {
       },
       {
         fullName: 'Vladimir Sanchez',
+        photo: '../../../assets/img/player.jpeg',
         VB: '9',
         AI: '9',
         HC: '4',
@@ -45,6 +48,7 @@ export class TeamStatisticsComponent {
       },
       {
         fullName: 'Carlos Marques',
+        photo: '../../../assets/img/player.jpeg',
         VB: '9',
         AI: '9',
         HC: '4',
@@ -57,6 +61,7 @@ export class TeamStatisticsComponent {
       },
       {
         fullName: 'Rigoberto Roso',
+        photo: '../../../assets/img/player.jpeg',
         VB: '9',
         AI: '9',
         HC: '4',
@@ -69,6 +74,7 @@ export class TeamStatisticsComponent {
       },
       {
         fullName: 'Wilmer Cervantes',
+        photo: '../../../assets/img/player.jpeg',
         VB: '9',
         AI: '9',
         HC: '4',
@@ -81,6 +87,7 @@ export class TeamStatisticsComponent {
       },
       {
         fullName: 'Jose Coa',
+        photo: '../../../assets/img/player.jpeg',
         VB: '9',
         AI: '9',
         HC: '4',
@@ -93,6 +100,7 @@ export class TeamStatisticsComponent {
       },
       {
         fullName: 'Orlando Delgado',
+        photo: '../../../assets/img/player.jpeg',
         VB: '9',
         AI: '9',
         HC: '4',
@@ -105,6 +113,7 @@ export class TeamStatisticsComponent {
       },
       {
         fullName: 'Leandro Perez',
+        photo: '../../../assets/img/player.jpeg',
         VB: '9',
         AI: '9',
         HC: '4',
@@ -117,6 +126,7 @@ export class TeamStatisticsComponent {
       },
       {
         fullName: 'Luis Peña',
+        photo: '../../../assets/img/player.jpeg',
         VB: '9',
         AI: '9',
         HC: '4',
@@ -129,6 +139,7 @@ export class TeamStatisticsComponent {
       },
       {
         fullName: 'Jose Alvarado',
+        photo: '../../../assets/img/player.jpeg',
         VB: '9',
         AI: '9',
         HC: '4',
@@ -141,6 +152,7 @@ export class TeamStatisticsComponent {
       },
       {
         fullName: 'Wilmer Gordillo',
+        photo: '../../../assets/img/player.jpeg',
         VB: '9',
         AI: '9',
         HC: '4',
@@ -153,6 +165,7 @@ export class TeamStatisticsComponent {
       },
       {
         fullName: 'Luis Piñero',
+        photo: '../../../assets/img/player.jpeg',
         VB: '9',
         AI: '9',
         HC: '4',
@@ -165,6 +178,7 @@ export class TeamStatisticsComponent {
       },
       {
         fullName: 'Erwin Montilla',
+        photo: '../../../assets/img/player.jpeg',
         VB: '9',
         AI: '9',
         HC: '4',
@@ -177,6 +191,7 @@ export class TeamStatisticsComponent {
       },
       {
         fullName: 'Kevin Gonzales',
+        photo: '../../../assets/img/player.jpeg',
         VB: '9',
         AI: '9',
         HC: '4',
@@ -189,6 +204,7 @@ export class TeamStatisticsComponent {
       },
       {
         fullName: 'Karin Nieto',
+        photo: '../../../assets/img/player.jpeg',
         VB: '9',
         AI: '9',
         HC: '4',
@@ -201,6 +217,7 @@ export class TeamStatisticsComponent {
       },
       {
         fullName: 'Karin Nieto',
+        photo: '../../../assets/img/player.jpeg',
         VB: '9',
         AI: '9',
         HC: '4',
@@ -213,6 +230,7 @@ export class TeamStatisticsComponent {
       },
       {
         fullName: 'Jhony Gonzalez',
+        photo: '../../../assets/img/player.jpeg',
         VB: '9',
         AI: '9',
         HC: '4',
@@ -225,6 +243,7 @@ export class TeamStatisticsComponent {
       },
       {
         fullName: 'Hector Perdomo',
+        photo: '../../../assets/img/player.jpeg',
         VB: '9',
         AI: '9',
         HC: '4',
@@ -237,6 +256,7 @@ export class TeamStatisticsComponent {
       },
       {
         fullName: 'Endric Gonzalez',
+        photo: '../../../assets/img/player.jpeg',
         VB: '9',
         AI: '9',
         HC: '4',
@@ -249,6 +269,7 @@ export class TeamStatisticsComponent {
       },
       {
         fullName: 'Jose Ramirez',
+        photo: '../../../assets/img/player.jpeg',
         VB: '9',
         AI: '9',
         HC: '4',
@@ -263,13 +284,17 @@ export class TeamStatisticsComponent {
   ]
 }
 
-  constructor() {
+  constructor(private router: Router) {
     this.categoryList = this.teamStatistics;
   }
 
   ngOnInit(): void {
     this.categoryList = this.teamStatistics;
     console.log(this.categoryList)
+  }
+
+  goToStatistics(){
+    this.router.navigateByUrl('/estadisticas');
   }
 }
 

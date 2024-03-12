@@ -1,9 +1,6 @@
 <!-- TODO: Add header table titles -->
 <div class="header ">
     <div class="breadcrumb content">
-      <span routerLink="/home">INICIO</span>
-      <span class="separator">|</span>
-      <span>RESULTADOS</span>
       <h1 class="title">RESULTADOS</h1>
 
     </div>
@@ -27,17 +24,26 @@
       <div class="scoreboard" *ngFor="let match of categoryList" >
           <div class="team-score">
             <div class="team">
-              <img src="{{ match.teamIcon1 }}">
-              <p>{{ match.team1Name }}</p>
+              <div>
+                <div class="team-winner">
+                  <img src="{{ match.teamIcon1 }}">
+                  <p>{{ match.team1Name }}</p>
+                </div>
+                <p class="pitcher">PG <span>Ramiro Lopez</span></p>
+                <p class="score">{{match.team1Score}}</p>
+              </div>
+              <div>
+                <div class="team-winner">
+                  <img src="{{ match.teamIcon2 }}">
+                  <p>{{ match.team2Name  }}</p>
+                </div>
+                <p class="pitcher">PP <span>Aquiles Meto</span></p>
+                <p class="score">{{match.team2Score}}</p>
+              </div>
             </div>
-            <div class="vs">VS</div>
-            <div class="team">
-              <img src="{{ match.teamIcon2 }}">
-              <p>{{ match.team2Name  }}</p>
-            </div>
+
           </div>
-          <div class="score">{{match.team1Score}} - {{match.team2Score}}</div>
-  
+          <div class="team-pitcher"></div>  
         </div>
     </div>
 

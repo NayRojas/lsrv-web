@@ -1,9 +1,7 @@
 <div class="header ">
     <div class="breadcrumb content">
-        <span routerLink="/home">INICIO</span>
-        <span class="separator">|</span>
-        <span>ESTADISTICAS</span>
-        <h1 class="title">ESTADISTICAS</h1>
+
+        <h1 class="title">ESTADÍSTICAS</h1>
 
     </div>
 </div>
@@ -40,7 +38,7 @@
         <div class="scoreboard" *ngFor="let postition of categoryList">
             <div class="team-score">
                 <div class="team">
-                    <img src="{{postition.icon}}" (click)="showTeamStatistics()">
+                    <img src="{{postition.icon}}" (click)="showTeamStatistics(postition.teamName)">
                 </div>
                 <div class="vs">{{postition.teamName}}</div>
                 <div class="position">

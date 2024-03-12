@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'inicio', component: HomeComponent },
   { path: 'resultados', component: ResultsComponent },
   { path: 'estadisticas', component: StatisticsComponent },
-  { path: 'estadisticasteam', component: TeamStatisticsComponent },
+  { path: 'estadisticas/:id', component: TeamStatisticsComponent },
 
 ];
 

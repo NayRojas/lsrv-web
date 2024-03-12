@@ -290,8 +290,8 @@ export class StatisticsComponent {
     this.categoryList = this.statisticResults.filter(item => item.teamCategory === "A")
    }
 
-   public showTeamStatistics(){
-    this.router.navigateByUrl('/estadisticasteam');
+   public showTeamStatistics(id:string){
+    this.router.navigate(['/estadisticas', id]);
    }
 
   public transformSeasonDate() {

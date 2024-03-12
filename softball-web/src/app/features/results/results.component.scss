@@ -50,14 +50,11 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #efeeeed2; /* Use the full height of the viewport */
-
+    background-color: #efeeeed2;
   }
   
 .scoreboard {
     font-family: 'Arial', sans-serif;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
     border-bottom: 0.5px solid rgba(205, 204, 204, 0.451) ;
     width: 100%; /* Adjust the width as needed */
@@ -68,11 +65,15 @@
   .scoreboard-cont {
     width: 700px; /* Adjust the width as needed */
     margin: auto;
-  padding: 0 1rem 0.3rem 1rem;
 border-radius: 5px;
 border: 0.5px solid rgb(234, 234, 234);  
 background-color: white;
+box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 7px 1px;
 
+}
+
+.scoreboard:hover {
+  background-color: #f0f0f0;
 }
 .radio-button {
   display: flex;
@@ -132,31 +133,49 @@ background-color: white;
   }
   
   .team-score {
-    display: flex;
+    display: block;
     align-items: center;
+  }
+
+  .pitcher {
+    color:  #c7c7c7;
+    font-weight: 100;
   }
   
   .team {
-    width: 11rem;
+    display: block;
     align-items: center;
-    text-align: center;
-    padding: 0.5rem;
+    text-align: right;
+    padding-top: 0.5rem;
+    
+    div{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 0.5rem 0.3rem 0.5rem;
+    }
+  }
+
+  .team-winner {
+    width: 10rem;
+    text-align: left;
+    p {
+      color: #484848;
+    }
   }
   
   .team {
     p {
-      font-weight: 700;
-      text-transform: uppercase;
+      text-transform:capitalize;
       font-stretch: expanded;
-      color: #000064;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 14px;
       margin: 0px 0.5rem;
     }
     img {
 
-    width: 43px;
-    height: auto;
+    width: 35px;
+    height: 35px;
     outline: none;
     border: none;
     border-radius: 100%;

@@ -52,7 +52,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #efeeeed2;
+    background-color: #ffffffe7;
     /* Use the full height of the viewport */
 
 }
@@ -60,6 +60,7 @@
 .scoreboard {
     font-family: 'Arial', sans-serif;
     display: flex;
+    padding: 0.2rem 0 0.2rem 0;
     justify-content: space-between;
     align-items: center;
     border-bottom: 0.5px solid rgba(205, 204, 204, 0.451);
@@ -69,14 +70,18 @@
 
 }
 
+.scoreboard:hover {
+    background-color: #f0f0f0;
+}
+
 .scoreboard-cont {
     width: 700px;
     /* Adjust the width as needed */
     margin: auto;
-    padding: 0 1rem 0.3rem 1rem;
     border-radius: 5px;
     border: 0.5px solid rgb(234, 234, 234);
     background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 7px 1px;
 
 }
 
@@ -172,7 +177,7 @@
 
 .position {
     display: flex;
-    margin-left: 8rem;
+    margin-left: 6rem;
 
     div {
         justify-content: space-between;
@@ -188,6 +193,68 @@
     }
 }
 
+.team-info {
+    width: 700px;
+    /* Adjust the width as needed */
+    margin: 1rem auto 0 auto;
+    display: flex;
+    color: #333;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    img {
+        width: 100px;
+        height: 100px;
+        outline: none;
+        border: none;
+        border-radius: 100%;
+        margin-right: 2rem;
+    }
+    .team-stats {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        div {
+            align-items: center;
+
+            .category {
+                color: #c0c0c0;
+                font-weight: lighter;
+            }
+            .team-metrics div{
+                display: flex;
+            }
+        }
+        div:first-child h2{
+            margin-right: 1rem;
+
+        }
+        div:last-child {
+            display: flex;
+            text-align: right;
+            align-items: baseline;
+            p {
+                margin-right: 2rem;
+                color: #979797;
+                font-size: 16px;
+            }
+        }
+    }
+}
+.blueFont {
+    color: #000064;
+    font-weight: 700;
+}
+
+.player-image {
+    width: 35px; // Example size, adjust as needed
+    height: 35px; // Should be the same as width to create a circle
+    border-radius: 50%; // This makes the image round
+    object-fit: cover; // This will cover the area without stretching the image
+    border: 2px solid #fff; // Optional: adds a white border around the image, remove if not needed
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Optional: adds a subtle shadow, remove if not needed
+    margin-left: 0.5rem;
+  }
+
 .table-title {
     display: flex;
     color: #333;
@@ -195,17 +262,19 @@
     font-family: Arial, Helvetica, sans-serif;
     width: 700px;
     /* Adjust the width as needed */
-    margin: 3rem auto 0.5rem auto;
+    margin: 2rem auto 0.5rem auto;
     justify-content: space-between;
-
+    div span{
+        color: #979797;
+    }
     span {
         margin-right: 1.6rem;
     }
 
     span:last-child {
         margin-right: 0.8rem;
-
     }
+
 
 }
 
