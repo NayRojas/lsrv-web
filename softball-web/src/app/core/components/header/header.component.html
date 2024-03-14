@@ -1,4 +1,4 @@
-<header class="header">
+<!-- <header class="header">
     <div class="container">
       <div class="logo">
         <img src="../../../../assets/img/logo.png" alt="Liga de Softbol Rafel Vargas">
@@ -11,19 +11,85 @@
           <li><a routerLink="/inicio">Inicio</a></li>
           <li><a routerLink="/resultados">Resultados</a></li>
           <li><a routerLink="/estadisticas">Estadísticas</a></li>
-          <!-- <li><a href="#">Juegos</a></li> -->
           <li><a href="#">Contacto</a></li>
         </ul>
       </nav>
-      <div class="search-icon">
-        <i class="fas fa-search"></i>
+      <div>
+        <div class="search-icon">
+          <i class="fas fa-search"></i>
+        </div>
+        <div class="menu-icon">
+          <i class="fas fa-bars"></i>
+        </div>
       </div>
-      <div class="cart-icon">
-        <i class="fas fa-shopping-cart"></i>
-      </div>
-      <div class="menu-icon">
-        <i class="fas fa-bars"></i>
+    
+    </div>
+  </header>-->
+
+
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <img src="../../../../assets/img/logo.png" alt="Liga de Softbol Rafel Vargas">
+      <div class="company-name" (click)="goToHome()">
+        Liga de Softbol Rafael Vargas
       </div>
     </div>
-  </header>
-  
+    <!-- Desktop menu -->
+    <nav class="desktop-menu options">
+      <ul>
+        <li><a routerLink="/inicio">Inicio</a></li>
+        <li><a routerLink="/resultados">Resultados</a></li>
+        <li><a routerLink="/estadisticas">Estadísticas</a></li>
+        <!-- <li><a href="#">Juegos</a></li> -->
+        <li><a href="#">Contacto</a></li>
+      </ul>
+      <div>
+        <div class="search-icon">
+          <i class="fas fa-search"></i>
+        </div>
+      </div>
+    </nav>
+    <div class="search-icon">
+    </div>
+    <!-- Mobile menu button -->
+    <div class="hamburger-menu" >
+      <i class="fas fa-search"></i>
+      <i class="fas" [class.fa-bars]="!isMenuVisible" [class.fa-times]="isMenuVisible" (click)="toggleMenu()"></i>
+    </div>
+
+    <!-- Mobile menu (hidden on desktop, visible on mobile when isMenuVisible is true) -->
+    <div class="mobile-menu" [class.active]="isMenuVisible">
+      <div class="close-button" (click)="toggleMenu()">
+        <i class="fas fa-times"></i> <!-- Ícono de cierre -->
+      </div>
+      <ul>
+        <li><a routerLink="/inicio">Inicio</a></li>
+        <li><a routerLink="/resultados">Resultados</a></li>
+        <li><a routerLink="/estadisticas">Estadísticas</a></li>
+        <!-- <li><a href="#">Juegos</a></li> -->
+        <li><a href="#">Contacto</a></li>        <!-- ... other menu items ... -->
+      </ul>
+      <div>
+
+      </div>
+    </div>
+
+    <div class="mobile-menu-container" *ngIf="isMenuVisible">
+      <nav class="mobile-menu" [class.active]="isMenuVisible">
+      
+        <ul>
+          <li><a routerLink="/inicio">Inicio</a></li>
+          <li><a routerLink="/resultados">Resultados</a></li>
+          <li><a routerLink="/estadisticas">Estadísticas</a></li>
+          <!-- <li><a href="#">Juegos</a></li> -->
+          <li><a href="#">Contacto</a></li>        <!-- ... other menu items ... -->
+        </ul>
+      </nav>
+    </div>
+
+    <div>
+    </div>
+
+  </div>
+</header>

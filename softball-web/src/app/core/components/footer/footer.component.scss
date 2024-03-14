@@ -39,3 +39,13 @@
   height: 24px; /* Keep square aspect ratio */
   margin: 0 0.5em; /* Space out the icons */
 }
+
+
+@media (max-width: 575.98px) { 
+  .footer-section {
+    p {
+      font-size: 12px;
+    }
+  }
+ }
+

@@ -8,8 +8,107 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 10px 20px; /* Espaciado interno */
+
+      nav {
+        width: 100%;
+        justify-content: end;
+      }
     }
+
+    .desktop-menu {
+      display: flex;
+      align-items: center;
+
+      // ... other styles ...
+  
+      @media (max-width: 768px) {
+        display: none; // Hide desktop menu on mobile
+      }
+    }
+
+    .hamburger-menu {
+      display: none; // Hide hamburger by default
+      // ... styles for the hamburger icon ...
+      i {
+        // Toggle menu icons
+        &.fa-bars { 
+          margin-left: 1rem;
+         }
+        &.fa-times { /* styles for times icon */ }
+      }
+      @media (max-width: 768px) {
+        display: block; // Show hamburger icon on mobile
+        width: 40%;
+    text-align: end;
+      }
+    }
+
+    .mobile-menu {
+      display: none;
+  position: fixed; // o absolute, dependiendo de tu layout
+  top: 0;
+  right: 0;
+  width: 26%; // o la anchura deseada
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 1000; // Asegúrate que esté por encima de otros elementos
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: translateX(100%); // Escondido fuera de la pantalla
+  .close-button {
+    position: absolute;
+    top: 10px; // Ajusta la posición vertical
+    right: 10px; // Ajusta la posición horizontal
+    cursor: pointer;
+    // Estilos adicionales si necesarios
+    
+    i {
+      font-size: 24px; // Tamaño del ícono
+      color: #000; // Color del ícono
+    }
+  }
+      &.active {
+        display: block;
+        transform: translateX(0); // Slide in menu
+        background-color: #030944;
+        color: white;
+        div i {
+          color: white;
+        }
+      }
+      ul {
+        list-style-type: none; // Esto quita los bullets
+        padding-left: 0; // Esto quita el padding que suele tener las listas
+        li a{
+          text-decoration: none;
+          color: white;
+          font-family: Arial, Helvetica, sans-serif;
+
+
+        }
+      }
+
+      &:not(.active) {
+        transform: translateX(100%); // O cualquier que sea la posición "cerrada" del menú
+        opacity: 0; // Menú completamente oculto
+      }
+    }  
+
+    .mobile-menu-container {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 26%; // Width of the mobile menu
+      background: #fff; // Background of the mobile menu
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+      
+      @media (max-width: 768px) {
+        display: block; // Show the menu container on mobile
+      }
+    }
+  
   
     .logo {
     display: flex;
@@ -17,6 +116,7 @@
     font-weight: 700;
     text-transform: uppercase;
     align-self: center;
+    cursor: pointer;
       img {
       height: 40px; /* Tamaño del logo */
       border-radius: 5px;
@@ -30,13 +130,18 @@
       margin: auto;
     }
   
-    .options ul {
+    .options {
+
+      ul {
       list-style-type: none;
       margin: 0;
       padding: 0;
       display: flex;
       justify-content: end;
+
+
     }
+  }
   
     .options li {
       margin-right: 20px; /* Espaciado entre opciones */
@@ -51,8 +156,50 @@
     .search-icon,
     .cart-icon,
     .menu-icon {
-      font-size: 1.5rem; /* Tamaño de los iconos */
+      font-size: 1rem; /* Tamaño de los iconos */
       cursor: pointer;
     }
   }
   
+
+    
+  @media (min-width: 768px) {
+    .logo {
+      width: 60%;
+    }
+
+    header .container {
+      padding: 5px 10px;
+    }
+
+    .mobile-menu {
+      transform: translateX(100%);
+
+      ul {
+        // Make the menu items display vertically
+        flex-direction: column;
+        li {
+          // Style for mobile menu items
+          text-align: left; // Align text to the left
+          margin: 0; // Reset margins
+          a {
+            // Style for mobile menu links
+            display: block; // Make the links take the full width
+            padding: 13px; // Add padding for tap targets
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .logo {
+      width: 60%;
+    }
+
+
+    header .container {
+      padding: 10px 20px;
+    }
+  }
+

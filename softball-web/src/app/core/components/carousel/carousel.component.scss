@@ -17,7 +17,6 @@
       display: block;
       font-size: 1rem;
       letter-spacing: 0.1rem;
-      margin-bottom: 1rem;
       text-transform: uppercase;
       font-weight: 300;
       color: #ffffff; /* Color del texto */
@@ -76,3 +75,40 @@
 .btn-primary {
   @include button-colors(#ff4500);
 }
+
+    
+@media (min-width: 768px) {
+
+}
+
+@media (max-width: 1199.98px) {
+  .carousel-item {
+    .carousel-caption{
+      span {
+        margin-bottom: 1rem;
+      }
+      h1{
+        font-size: 5rem;
+      }
+      h2 {
+        font-size: 4rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) { 
+  .carousel-item {
+    .carousel-caption{
+      span {
+        margin-bottom: 2rem;
+      }
+      h1{
+        font-size: 1.5rem;
+      }
+      h2 {
+        font-size: 3rem;
+      }
+    }
+  }
+ }
