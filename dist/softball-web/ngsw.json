@@ -1,0 +1,135 @@
+{
+  "configVersion": 1,
+  "timestamp": 1710563799263,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/favicon.ico",
+        "/index.html",
+        "/main.bec408bf7c90a0d4.js",
+        "/manifest.webmanifest",
+        "/polyfills.8bff60c61c5f910a.js",
+        "/runtime.1264c1158f6aa32d.js",
+        "/styles.7bf520e1c4dc154e.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/img/carousel-baseball-1.jpeg",
+        "/assets/img/carousel-softball-2.jpeg",
+        "/assets/img/facebook.jpeg",
+        "/assets/img/logo.png",
+        "/assets/img/player.jpeg",
+        "/assets/img/team-icon.jpeg",
+        "/assets/img/teams/Boston.jpeg",
+        "/assets/img/teams/Bravos.jpeg",
+        "/assets/img/teams/Cagua.jpeg",
+        "/assets/img/teams/CardenalesB.jpeg",
+        "/assets/img/teams/EspartanosA.jpeg",
+        "/assets/img/teams/GuerrerosB.jpeg",
+        "/assets/img/teams/MaitanaA.jpeg",
+        "/assets/img/teams/Milwaukee.jpeg",
+        "/assets/img/teams/Pitsburg.jpeg",
+        "/assets/img/teams/Rangers.jpeg",
+        "/assets/img/teams/Soy VenezuelaB.jpeg",
+        "/assets/img/teams/Team Borracho.jpeg",
+        "/assets/img/teams/The AlliensB.jpeg",
+        "/assets/img/teams/The Rockies.jpeg",
+        "/assets/img/teams/Toronto.jpeg",
+        "/assets/img/teams/VIkingosA.jpeg",
+        "/assets/img/teams/WhatsApp Image 2024-03-04 at 22.52.56 (7).jpeg",
+        "/assets/img/teams/White Sox.jpeg",
+        "/assets/img/whatsapp.jpeg",
+        "/carousel-baseball-1.82f404ffe5c008ef.jpeg",
+        "/carousel-softball-2.219a8f8987fe6435.jpeg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/assets/icons/icon-128x128.png": "b1f06c7d714abb4a0cc4d1f7c954feb26826e4c4",
+    "/assets/icons/icon-144x144.png": "96a0d629765c1bc85d9263c6bc83094ca776d267",
+    "/assets/icons/icon-152x152.png": "b1fbbee3902eb96a7658e3bb006f31f78ca5a44c",
+    "/assets/icons/icon-192x192.png": "e4211163bf0911688fbfb80278d8ff4d2f77691d",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/assets/icons/icon-72x72.png": "279825a1ac4377032ae996a1832c641e33ccf1b6",
+    "/assets/icons/icon-96x96.png": "592885efcbfee27e5e20be4fa3043589390d2740",
+    "/assets/img/carousel-baseball-1.jpeg": "3b22f37065c6e7798d22ebddad1360b2935f8cbe",
+    "/assets/img/carousel-softball-2.jpeg": "32a675752dd4772795c584f89d154e531797258d",
+    "/assets/img/facebook.jpeg": "915faf24c040c59512003b8ba0db3111791c1326",
+    "/assets/img/logo.png": "62a16dd483ef83a36c77befaa1478f1fb371c42d",
+    "/assets/img/player.jpeg": "7ac1ffe0673cba96b91f22ffb96fd5756e63699a",
+    "/assets/img/team-icon.jpeg": "fd565573d4cb80af13b2085a3325757ac1f53242",
+    "/assets/img/teams/Boston.jpeg": "de016b8b129173ce454d899164ec10a5c16b3310",
+    "/assets/img/teams/Bravos.jpeg": "b9a3a0ecc8aade069949b8231c9f4d92870509f8",
+    "/assets/img/teams/Cagua.jpeg": "b73fece324df050ea97a836c223368cb15a17fab",
+    "/assets/img/teams/CardenalesB.jpeg": "eb1e2be341b67a1abb068b6832a30106d3858044",
+    "/assets/img/teams/EspartanosA.jpeg": "04365220c3d0bd81576f95fdd36ae318d1964f06",
+    "/assets/img/teams/GuerrerosB.jpeg": "c54922edbaf947be54cbc5e4f9d294f42295ceb7",
+    "/assets/img/teams/MaitanaA.jpeg": "4f2b61e40ad3c9e145e451579833b3bd64c46be9",
+    "/assets/img/teams/Milwaukee.jpeg": "b5a3ee23af6f8c1a042710ec90996a42d4426358",
+    "/assets/img/teams/Pitsburg.jpeg": "b0b620e08b8d48b7e80b5d18d127ee2d193454a3",
+    "/assets/img/teams/Rangers.jpeg": "a2363c03f4672ea88abc2ebc5ca7046a4a9b7de6",
+    "/assets/img/teams/Soy VenezuelaB.jpeg": "ff3eda2e6c04913a56957a0d4263180f0a97af36",
+    "/assets/img/teams/Team Borracho.jpeg": "2322e602f59822adaa3e74bd4ec23a05ed4abd81",
+    "/assets/img/teams/The AlliensB.jpeg": "9c9ed23c036570ab7acf37bb8faca5c356849217",
+    "/assets/img/teams/The Rockies.jpeg": "0a44064ea82839fc8e36a024e2ef6b5c08d24df1",
+    "/assets/img/teams/Toronto.jpeg": "c602e772fec80a149e0b3c63f744755fad56be75",
+    "/assets/img/teams/VIkingosA.jpeg": "2818dea3109dcd47e0865e49b36b5c2ec8beb3a6",
+    "/assets/img/teams/WhatsApp Image 2024-03-04 at 22.52.56 (7).jpeg": "677692473e7bd36f658098d56804644e8b27072d",
+    "/assets/img/teams/White Sox.jpeg": "44d02309719e445f9b2a36f026c575686fbb3168",
+    "/assets/img/whatsapp.jpeg": "d7d13cb449210495f4ccb324e91930596ae77047",
+    "/carousel-baseball-1.82f404ffe5c008ef.jpeg": "3b22f37065c6e7798d22ebddad1360b2935f8cbe",
+    "/carousel-softball-2.219a8f8987fe6435.jpeg": "32a675752dd4772795c584f89d154e531797258d",
+    "/favicon.ico": "13989b5fc7051242c6befea7c3e8d3c0270fc0f5",
+    "/index.html": "6ba8189f2c8287e8c9d9bca9c036911f49dba9df",
+    "/main.bec408bf7c90a0d4.js": "720ccc3ffb874b487c94a187b7e22ea6abdf46c1",
+    "/manifest.webmanifest": "64fd6ebb6abca464fc18bfc4ce8ac57b3fcb814a",
+    "/polyfills.8bff60c61c5f910a.js": "3d41742aff500664c291d84c16beecaa74c04fbd",
+    "/runtime.1264c1158f6aa32d.js": "97dcdc5655cf8354dcd49cb482cbeaffa0ae9da4",
+    "/styles.7bf520e1c4dc154e.css": "1280bc96f90284edc2f74fe7be9e9320e1d8bab3"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
