@@ -1,0 +1,68 @@
+<div class="header ">
+    <div class="breadcrumb content">
+
+        <h1 class="title">ESTADÍSTICAS</h1>
+
+    </div>
+</div>
+<div class="scoreboard-container">
+    <div class="team-info" *ngIf="teamStatistics">
+            <div (click)="goToStatistics()">
+                <img [src]="teamStatistics.teamIcon" alt="{{teamStatistics.teamName}}" >
+            </div>
+          <div class="team-stats">
+            <div >
+                <h2>{{ teamStatistics.teamName }} <span class="category">{{ teamStatistics.teamCategory }}</span></h2>
+                <div class="team-metrics">
+                    <p>JG <span class="blueFont">{{ teamStatistics.jg }}</span></p>
+                    <p>JP <span class="blueFont">{{ teamStatistics.jp }}</span></p>
+                    <p>JE <span class="blueFont">{{ teamStatistics.je }}</span></p>
+                </div>
+            </div>
+            <div>
+
+                <h2><span class="blueFont">{{ teamStatistics.points }}</span> pts</h2>
+            </div>
+          </div>
+      </div>
+      
+    <div >
+        <div class="table-title">
+            <div><span>Nombre y apellido</span> </div>
+            <div>
+                <span class="season-text">VB</span>
+                <span class="season-text">AI</span>
+                <span class="season-text">HC</span>
+                <span class="season-text">H1</span>
+                <span class="season-text">H2</span>
+                <span class="season-text">H3</span>
+                <span class="season-text">HR</span>
+                <span class="season-text">JJ</span>
+                <span class="season-text">AVG.</span>
+    
+            </div>
+        </div>
+        <div class="scoreboard-cont">
+            <div class="scoreboard" *ngFor="let team of categoryList.players">
+                <div class="team-score">
+                    <img class="player-image" src="{{ team.photo }}" alt="{{ team.fullName }}">
+                    <div class="vs">{{team.fullName}}</div>
+                    <div class="position">
+                        <div>{{team.VB}}</div>
+                        <div>{{team.AI}}</div>
+                        <div>{{team.HC}}</div>
+                        <div>{{team.H1}}</div>
+                        <div>{{team.H2}}</div>
+                        <div>{{team.H3}}</div>
+                        <div>{{team.HR}}</div>
+                        <div>{{team.JJ}}</div>
+                        <div>{{team.AVG}}</div>
+                    </div>
+                </div>
+                <div class="score"></div>
+    
+            </div>
+        </div>
+    
+    </div>
+</div>
