@@ -44,13 +44,14 @@
     }
 
     .mobile-menu {
-      display: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
   position: fixed; // o absolute, dependiendo de tu layout
   top: 0;
   right: 0;
-  width: 26%; // o la anchura deseada
-  height: 100%;
-  background-color: #ffffff;
+  height: 100vh;
+  background-color: #030944;
   z-index: 1000; // Asegúrate que esté por encima de otros elementos
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
   transform: translateX(100%); // Escondido fuera de la pantalla
@@ -67,10 +68,11 @@
     }
   }
       &.active {
-        display: block;
+        justify-content: space-between;
         transform: translateX(0); // Slide in menu
         background-color: #030944;
         color: white;
+        padding: 5%;
         div i {
           color: white;
         }
@@ -78,18 +80,28 @@
       ul {
         list-style-type: none; // Esto quita los bullets
         padding-left: 0; // Esto quita el padding que suele tener las listas
-        li a{
-          text-decoration: none;
-          color: white;
-          font-family: Arial, Helvetica, sans-serif;
-
-
+        li {
+          margin-bottom: 1.5rem;
+          a{
+            text-decoration: none;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+  
+  
+          }
         }
       }
 
       &:not(.active) {
+        justify-content: space-between;
         transform: translateX(100%); // O cualquier que sea la posición "cerrada" del menú
         opacity: 0; // Menú completamente oculto
+        background-color: #030944;
+        color: white;
+        padding: 5%;
+        div i {
+          color: white;
+        }
       }
     }  
 
@@ -126,7 +138,7 @@
   
     .company-name {
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 1.2rem; /* Tamaño del nombre de la empresa */
+      font-size: 1.03rem; /* Tamaño del nombre de la empresa */
       margin: auto;
     }
   
@@ -161,9 +173,14 @@
     }
   }
   
-
+  .social-link img {
+    width: 24px; /* Example size, adjust as needed */
+    height: 24px; /* Keep square aspect ratio */
+    margin: 0 0.5em; /* Space out the icons */
+  }
+  
     
-  @media (min-width: 768px) {
+  @media (max-width: 768px) {
     .logo {
       width: 60%;
     }
@@ -172,9 +189,11 @@
       padding: 5px 10px;
     }
 
+    .mobile-menu:active{
+      width: 15rem;
+    }
     .mobile-menu {
       transform: translateX(100%);
-
       ul {
         // Make the menu items display vertically
         flex-direction: column;
@@ -186,9 +205,19 @@
             // Style for mobile menu links
             display: block; // Make the links take the full width
             padding: 13px; // Add padding for tap targets
+            font-size: 21px;
           }
         }
       }
+      &.active {
+        width: 15rem;
+
+      }
+    }
+
+    .social-link img {
+      width: 36px;
+      height: 36px;
     }
   }
 
@@ -201,5 +230,12 @@
     header .container {
       padding: 10px 20px;
     }
+
   }
+
+  @media (max-width: 576px) { 
+    .mobile-menu:active{
+      width: 10rem;
+    }
+   }
 
